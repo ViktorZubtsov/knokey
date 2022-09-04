@@ -4,7 +4,7 @@ import $ApartmentsList from "@/classes/apartments/ApartmentsList";
 
 interface IUseApartmentsList {
   apartmentsList: Ref<Array<TApartment>>
-  isLoading: Ref<boolean>
+  isFetch: Ref<boolean>
   search: Ref<string>
   page: Ref<number>
   limit: Ref<number>
@@ -12,19 +12,19 @@ interface IUseApartmentsList {
 }
 const useApartmentsList = (): IUseApartmentsList => {
   const apartmentsList = computed(() => $ApartmentsList.items )
-  const isLoading = ref(true);
+  const isFetch = ref(true);
   const search = ref('');
   const page = ref(1)
   const limit = ref(0)
 
   const loadApartmentsList = (): void => {
-    isLoading.value = true
+    isFetch.value = true
     const params = {
       search: search.value,
       page: page.value
     }
     $ApartmentsList.load(params).then(() => {
-      isLoading.value = false
+      isFetch.value = false
     })
   }
   watch(search, loadApartmentsList)
@@ -32,7 +32,7 @@ const useApartmentsList = (): IUseApartmentsList => {
 
   return {
     apartmentsList,
-    isLoading,
+    isFetch,
     search,
     page,
     limit,

@@ -1,22 +1,30 @@
 <template>
   <section class="container apartments">
-    Apartments
+    <apartments-card
+      v-for="item in apartmentsList"
+      :key="item.id"
+    />
+    <card-skeleton v-if="isFetch" />
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue'
 import useApartmentsList from "@/hooks/useApartments";
+import ApartmentsCard from "@/components/apartments/ApartmentsCard/ApartmentsCard.vue";
+import CardSkeleton from "@/components/apartments/CardSkeleton/CardSkeleton.vue";
 
 export default defineComponent({
   name: 'Apartments',
+  components: { CardSkeleton, ApartmentsCard },
   setup () {
-    const { apartmentsList, loadApartmentsList } = useApartmentsList();
+    const { apartmentsList, isFetch, loadApartmentsList } = useApartmentsList();
 
     onMounted(loadApartmentsList);
 
     return {
-      apartmentsList
+      apartmentsList,
+      isFetch
     }
   }
 })
