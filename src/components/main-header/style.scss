@@ -8,6 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1024px) {
+    padding: 25px 33px 15px 16px;
+  }
    .logo {
      width: 99px;
      height: 36px;
