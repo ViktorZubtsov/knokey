@@ -5,10 +5,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import useApartmentsList from "@/hooks/useApartments";
 
 export default defineComponent({
-  name: 'Apartments'
+  name: 'Apartments',
+  setup () {
+    const { apartmentsList, loadApartmentsList } = useApartmentsList();
+
+    onMounted(loadApartmentsList);
+
+    return {
+      apartmentsList
+    }
+  }
 })
 </script>
 
