@@ -5,6 +5,10 @@ const Apartments = (): Promise<RouteComponent> => import('../views/apartments/Ap
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/apartments'
+  },
+  {
+    path: '/apartments',
     name: 'Apartments',
     component: Apartments,
   }

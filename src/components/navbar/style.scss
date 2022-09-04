@@ -1,0 +1,15 @@
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 98px;
+  &__block {
+    display: grid;
+    grid-template-rows: 36px 1fr;
+    justify-items: center;
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "@/assets/style/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: $color-white-smoke-10;
+}
+a {
+  text-decoration: none;
+}

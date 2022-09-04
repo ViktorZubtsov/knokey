@@ -1,0 +1,8 @@
+@import "@/assets/style/variables.scss";
+
+.ui-text {
+  font-family: $fonts-family-main;
+  &_theme_dark {
+    color: $color-dark-10;
+  }
+}
