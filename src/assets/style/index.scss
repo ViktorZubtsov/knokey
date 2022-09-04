@@ -3,10 +3,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background: $color-white-smoke-10;
 }
 a {
   text-decoration: none;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  padding: 20px 0;
+  max-width: 1052px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1052px) {
+    padding: 16px;
+  }
 }

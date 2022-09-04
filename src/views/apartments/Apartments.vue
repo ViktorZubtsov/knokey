@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <section class="container apartments">
     Apartments
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -11,3 +11,7 @@ export default defineComponent({
   name: 'Apartments'
 })
 </script>
+
+<style lang="scss">
+@import "./style.scss";
+</style>
