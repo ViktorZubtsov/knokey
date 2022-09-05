@@ -1,8 +1,18 @@
 <template>
-  <article class="apartments-photo">
-    <div>d</div>
-    <div>w</div>
-    <div>w</div>
+  <article
+    class="apartments-photo"
+  >
+    <div
+      v-for="({path}, i) in photos"
+      :key="`key-${path}`"
+      class="apartments-photo__item"
+      :class="`apartments-photo__item-${i}`"
+    >
+      <img
+        :src="path"
+        :alt="`image-${i}`"
+      >
+    </div>
   </article>
 </template>
 
@@ -10,7 +20,13 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "ApartmentsPhoto"
+  name: "ApartmentsPhoto",
+  props: {
+    photos: {
+      type: Array,
+      required: true
+    }
+  }
 })
 </script>
 

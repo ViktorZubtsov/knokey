@@ -3,6 +3,7 @@
     <apartments-card
       v-for="item in apartmentsList"
       :key="item.id"
+      :apartment="item"
     />
     <card-skeleton v-if="isFetch" />
   </section>
