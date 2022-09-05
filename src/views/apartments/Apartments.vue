@@ -12,8 +12,8 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue'
 import useApartmentsList from "@/hooks/useApartments";
-import ApartmentsCard from "@/components/apartments/ApartmentsCard/ApartmentsCard.vue";
-import CardSkeleton from "@/components/apartments/CardSkeleton/CardSkeleton.vue";
+import ApartmentsCard from "@/components/apartments/apartments-card/ApartmentsCard.vue";
+import CardSkeleton from "@/components/apartments/card-skeleton/CardSkeleton.vue";
 
 export default defineComponent({
   name: 'Apartments',

@@ -7,7 +7,7 @@
     >
       <img
         class="nav-bar__block-img"
-        :src="require(`@/components/navbar/img/${item.icon}.svg`)"
+        :src="require(`@/components/common/navbar/img/${item.icon}.svg`)"
         :alt="`${item.icon}`"
       >
       <router-link
@@ -67,5 +67,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "./style.scss";
+@import "style";
 </style>

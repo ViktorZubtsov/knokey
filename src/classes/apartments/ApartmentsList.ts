@@ -1,6 +1,6 @@
 import { ref, Ref } from "vue";
 import TApartment from "@/classes/apartments/TApartment";
-import loadApartments, { TLoadParams } from "@/services/loadApartments/loadApartments";
+import loadApartments, { TLoadParams } from "@/services/load-apartments/loadApartments";
 
 interface IApartmentsList {
   items: Array<TApartment>

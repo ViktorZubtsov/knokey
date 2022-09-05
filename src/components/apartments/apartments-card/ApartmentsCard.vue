@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import ApartmentsPhoto from "@/components/apartments/ApartmentsCard/apartments-photo/ApartmentsPhoto.vue";
+import ApartmentsPhoto from "@/components/apartments/apartments-card/apartments-photo/ApartmentsPhoto.vue";
 import TApartment from "@/classes/apartments/TApartment";
-import ApartmentsInfo from "@/components/apartments/ApartmentsCard/apartments-info/ApartmentsInfo.vue";
+import ApartmentsInfo from "@/components/apartments/apartments-card/apartments-info/ApartmentsInfo.vue";
 
 export default defineComponent({
   name: 'ApartmentsCard',

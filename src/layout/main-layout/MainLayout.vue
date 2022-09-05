@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MainHeader from "@/components/main-header/MainHeader.vue";
+import MainHeader from "@/components/common/main-header/MainHeader.vue";
 
 export default defineComponent({
   name: 'MainLayout',

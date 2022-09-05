@@ -1,5 +1,6 @@
 .apartments-photo {
   display: grid;
+  position: relative;
   grid-template-areas: 'one  two' 'one three' ;
   grid-template-columns: 413px 162px;
   grid-gap:  16px;
@@ -23,5 +24,10 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+  }
+  .photo-btn {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
   }
 }

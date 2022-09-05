@@ -12,15 +12,18 @@
         :src="path"
         :alt="`image-${i}`"
       >
+      <photo-btn />
     </div>
   </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import PhotoBtn from "@/components/common/photo-btn/PhotoBtn.vue";
 
 export default defineComponent({
   name: "ApartmentsPhoto",
+  components: { PhotoBtn },
   props: {
     photos: {
       type: Array,
