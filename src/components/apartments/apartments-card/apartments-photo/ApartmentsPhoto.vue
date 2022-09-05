@@ -12,22 +12,59 @@
         :src="path"
         :alt="`image-${i}`"
       >
-      <photo-btn />
+      <photo-btn @click="openSlider(i)" />
+      <div style="position: absolute">
+        <vue-picture-swipe
+          :id="`swipe${i}`"
+          ref="pictureSwipe"
+          :items="photoList"
+        />
+      </div>
     </div>
   </article>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import PhotoBtn from "@/components/common/photo-btn/PhotoBtn.vue";
-
+export type TPhoto = Array<{
+  path: string
+}>
+export type TPhotoList = Array<{
+  w: number
+  h: number
+}>
 export default defineComponent({
   name: "ApartmentsPhoto",
   components: { PhotoBtn },
   props: {
     photos: {
-      type: Array,
+      type: Array as PropType<TPhoto>,
       required: true
+    },
+  },
+  computed: {
+    photoList (): TPhotoList {
+      const baseOpt = {
+        w: 1200,
+        h: 900
+      }
+
+    return this.photos.map(({ path }) => {
+        return {
+          src: path,
+          ...baseOpt
+        }
+      })
+    }
+  },
+  methods: {
+    openSlider (i: number): void {
+      //TODO: переделать c использованием $ref
+      const el = document.getElementById(`swipe${i}`)
+      //@ts-ignore
+      el.children[0].children[0].click()
+
     }
   }
 })
