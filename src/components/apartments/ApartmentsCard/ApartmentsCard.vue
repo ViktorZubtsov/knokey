@@ -1,6 +1,7 @@
 <template>
   <article class="apartments-card">
     <apartments-photo :photos="apartment.images" />
+    <apartments-info :apartment="apartment" />
   </article>
 </template>
 
@@ -8,10 +9,11 @@
 import { defineComponent, PropType } from 'vue'
 import ApartmentsPhoto from "@/components/apartments/ApartmentsCard/apartments-photo/ApartmentsPhoto.vue";
 import TApartment from "@/classes/apartments/TApartment";
+import ApartmentsInfo from "@/components/apartments/ApartmentsCard/apartments-info/ApartmentsInfo.vue";
 
 export default defineComponent({
   name: 'ApartmentsCard',
-  components: { ApartmentsPhoto },
+  components: { ApartmentsInfo, ApartmentsPhoto },
   props: {
     apartment: {
       type: Object as PropType<TApartment>,

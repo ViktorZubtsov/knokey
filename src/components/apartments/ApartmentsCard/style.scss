@@ -5,6 +5,7 @@
   box-shadow: 3px 4px 4px rgba(1, 0, 44, 0.25);
   background: $color-white-10;
   display: grid;
+  grid-column-gap: 20px;
   border-radius: 8px;
   grid-template-columns: 1fr  1fr;
 }
