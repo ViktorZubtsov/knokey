@@ -1,6 +1,6 @@
 <template>
   <article class="apartments-info">
-    <div>
+    <div class="block-desc">
       <ui-text
         theme="green"
         :font-size="18"
@@ -9,7 +9,7 @@
         :text="apartment.name"
       />
     </div>
-    <div>
+    <div class="block-desc">
       <ui-text
         theme="dark"
         :font-size="12"
