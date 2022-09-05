@@ -14,4 +14,8 @@
 }
 .apartments-card__mobile {
   display: none;
+  @media (max-width: 780px) {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
