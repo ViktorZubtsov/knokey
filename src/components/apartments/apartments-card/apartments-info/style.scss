@@ -1,0 +1,46 @@
+@import "@/assets/style/variables.scss";
+
+.apartments-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 2fr auto;
+  grid-row-gap: 16px;
+  @media (max-width: 780px) {
+    grid-template-rows: 2fr auto;
+    margin-top: 20px;
+    .block-desc {
+      display: none;
+    }
+  }
+}
+.apartments-info-card {
+  background: $color-white-smoke-20;
+  border-radius: 8px;
+  padding: 17px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12px;
+  grid-row-gap: 16px;
+  .card-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+.apartments-info-footer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 6px;
+  @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+}
+.apartments-info-btn {
+  background: $color-green-10;
+  padding: 14px 0;
+  width: 100%;
+  border:  0;
+  border-radius: 8px;
+}

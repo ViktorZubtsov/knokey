@@ -1,0 +1,15 @@
+@import "@/assets/style/variables.scss";
+
+.photo-btn {
+  padding: 10px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+  img {
+    width:  22px;
+    height: 20px;
+  }
+}

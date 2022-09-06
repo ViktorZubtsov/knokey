@@ -1,0 +1,18 @@
+@import "@/assets/style/variables.scss";
+
+.main-header {
+  background: $color-white-10;
+  padding: 25px 75px 15px 16px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 3px 4px 4px rgba(1, 0, 44, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1024px) {
+    padding: 25px 33px 15px 16px;
+  }
+   .logo {
+     width: 99px;
+     height: 36px;
+   }
+}
