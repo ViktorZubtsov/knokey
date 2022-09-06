@@ -29,9 +29,12 @@
     ]
   },
   "include": [
-    "../../hobbi/knokey/src/**/*.ts",
-    "../../hobbi/knokey/src/**/*.tsx",
-    "../../hobbi/knokey/src/**/*.vue",
+    "src/main.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
   ],
   "exclude": [
     "node_modules"
