@@ -6,6 +6,7 @@
       :apartment="item"
     />
     <card-skeleton v-if="isFetch" />
+    {{ count }}
   </section>
 </template>
 
@@ -14,6 +15,7 @@ import { defineComponent, onMounted } from 'vue'
 import useApartmentsList from "@/hooks/useApartments";
 import ApartmentsCard from "@/components/apartments/apartments-card/ApartmentsCard.vue";
 import CardSkeleton from "@/components/apartments/card-skeleton/CardSkeleton.vue";
+import { mapState } from "vuex";
 
 export default defineComponent({
   name: 'Apartments',
@@ -27,7 +29,11 @@ export default defineComponent({
       apartmentsList,
       isFetch
     }
-  }
+  },
+  computed: mapState([
+    // map this.count to store.state.count
+    'count'
+  ])
 })
 </script>
 
