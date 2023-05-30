@@ -31,7 +31,6 @@ export default defineComponent({
     }
   },
   computed: mapState([
-    // map this.count to store.state.count
     'count'
   ])
 })

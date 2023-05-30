@@ -46,13 +46,13 @@ export default defineComponent({
           id: 1,
           text: 'Язык (RU)',
           icon: 'lang_icon',
-          to: 'link_1'
+          to: 'create'
         },
         {
           id: 2,
           text: 'Сдать жильё',
           icon: 'rent_icon',
-          to: 'link_2'
+          to: 'apartments'
         },
         {
           id: 3,
