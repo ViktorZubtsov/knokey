@@ -1,23 +1,9 @@
 import { createStore } from "vuex";
+import apartmentModule, { IApartmentState } from "@/store/apartments";
 
-interface IStore {
-  count: number
-  apartmentName: string
-}
+export type IStore = IApartmentState
+
 const store = createStore<IStore>({
-  state () {
-    return {
-      count: 10,
-      apartmentName: ''
-    }
-  },
-  mutations: {
-    increment (state: IStore) {
-      state.count++
-    },
-    setApartmentName (state: IStore, name: IStore['apartmentName']) {
-      state.apartmentName = name
-    }
-  }
+  modules: { apartmentModule }
 })
 export default store

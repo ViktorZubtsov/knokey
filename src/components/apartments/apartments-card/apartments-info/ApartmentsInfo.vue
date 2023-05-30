@@ -93,7 +93,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 import UiText from "@/ui/ui-text/UiText.vue";
-import TApartment from "@/classes/apartments/TApartment";
+import TApartment from "@/types";
 
 export default defineComponent({
   name: "ApartmentsInfo",

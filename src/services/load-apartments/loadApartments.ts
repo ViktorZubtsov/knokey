@@ -1,4 +1,4 @@
-import TApartment from "@/classes/apartments/TApartment";
+import TApartment from "@/types";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const mok = require('./mok/apartments.json')
 export type TLoadParams = {

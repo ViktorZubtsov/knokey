@@ -67,7 +67,7 @@ import { defineComponent, PropType } from 'vue'
 //@ts-ignore
 import { GoogleMap, Marker } from "vue3-google-map";
 import ApartmentsPhoto from "@/components/apartments/apartments-card/apartments-photo/ApartmentsPhoto.vue";
-import TApartment from "@/classes/apartments/TApartment";
+import TApartment from "@/types";
 import ApartmentsInfo from "@/components/apartments/apartments-card/apartments-info/ApartmentsInfo.vue";
 import UiText from "@/ui/ui-text/UiText.vue";
 

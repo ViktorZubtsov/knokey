@@ -1,5 +1,5 @@
 import { computed, Ref, ref, watch } from "vue";
-import TApartment from "@/classes/apartments/TApartment";
+import TApartment from "@/types";
 import $ApartmentsList from "@/classes/apartments/ApartmentsList";
 
 interface IUseApartmentsList {
